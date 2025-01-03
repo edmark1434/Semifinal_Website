@@ -1,0 +1,913 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.logo {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #0072ff,
+    #00c6ff,
+    rgb(228, 139, 6),
+    #0072ff
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveColor 6s linear infinite;
+}
+
+@keyframes moveColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: #050505;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+.active {
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+.navbar a.book-tour {
+  font-size: 20px;
+  background-color: #0072ff;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.book-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 12px;
+}
+
+/* Responsive Styles for Book a Tour */
+@media (max-width: 768px) {
+  .navbar a.book-tour {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  .book-icon {
+    width: 25px; /* Smaller icon size on mobile */
+    margin-right: 10px; /* Adjust spacing */
+  }
+}
+
+.navbar a.book-tour:hover {
+  background-color: #03045e;
+}
+section {
+  padding: 30px 100px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: blue;
+  z-index: 1;
+}
+
+.home::before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  background: rgba(3, 96, 251, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content {
+  z-index: 2;
+  color: #ffffff;
+  width: 78%;
+}
+
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-right: 80px;
+  margin-top: 150px;
+}
+
+.home .content p {
+  margin-bottom: 20px;
+}
+
+.home .content a {
+  background-color: #0072ff;
+  padding: 12px 40px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home .content a:hover,
+.home .content a:active {
+  background-color: #03045e;
+  color: white;
+  border-color: #03045e;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .home .content h1 {
+    font-size: 3.5em;
+    line-height: 1.2;
+    margin-top: 100px;
+  }
+
+  .home .content p {
+    font-size: 1.1em;
+  }
+
+  .home .content a {
+    font-size: 1em;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .content h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    margin-top: 80px;
+  }
+
+  .home .content p {
+    font-size: 1em;
+  }
+
+  .home .content a {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .content h1 {
+    font-size: 2.5em; /* Reduce font size for very small screens */
+    line-height: 1.2; /* Keep line height consistent */
+    margin-top: 60px; /* Reduce margin further */
+  }
+
+  .home .content p {
+    font-size: 0.9em;
+  }
+
+  .home .content a {
+    font-size: 0.8em;
+    padding: 6px 15px;
+  }
+}
+
+.home video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0; /* Adjusted for better spacing */
+  flex-wrap: wrap;
+}
+
+.title-section .line {
+  flex: 1;
+  height: 2px;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+.title-section h2 {
+  font-family: "Merriweather";
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+#home-video {
+  transition: opacity 0.5s ease;
+}
+
+.hidden-video {
+  opacity: 0;
+}
+
+/*      Title  */
+.title-section h2 .featuring {
+  color: #000; /* Black for "featuring" */
+}
+
+.title-section h2 .moalboal {
+  color: #0072ff; /* Blue for "moalboal" */
+}
+
+@media (max-width: 768px) {
+  .title-section {
+    flex-direction: column;
+  }
+
+  .title-section .line {
+    width: 50%;
+    margin: 10px 0;
+  }
+
+  .title-section h2 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section h2 {
+    font-size: 1.5em;
+  }
+
+  .title-section .line {
+    width: 30%;
+  }
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  background: #3586ff;
+  color: #fff;
+  margin-top: 20vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Wave Effect */
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff url(wave1.png);
+  background-size: 1000px 100px;
+  animation: animatewave 3s linear infinite;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+}
+
+@keyframes animatewave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Footer Content Styling */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.footer-column h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icon {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
+
+.social-icon li {
+  list-style: none;
+}
+
+.social-icon li a {
+  font-size: 1.8em;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.social-icon li a:hover {
+  transform: scale(1.2);
+}
+
+/* Quick Links */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+/* Contact Section */
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Contact Details */
+.contact ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .social-icon {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column h4 {
+    font-size: 1.2em;
+  }
+
+  .footer-column p {
+    font-size: 0.85em;
+  }
+
+  .social-icon li a {
+    font-size: 1.5em;
+  }
+
+  .menu li a {
+    font-size: 0.9em;
+  }
+
+  .contact ul li {
+    font-size: 0.9em;
+  }
+}
+.dot-container {
+  position: absolute;
+  bottom: 20px; /* Adjust positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #0072ff; /* Change color on hover */
+}
+
+.dot.active {
+  background-color: #0072ff; /* Active state */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0072ff 50%, transparent 50%);
+  transition: left 1s ease-in-out; /* Apply the transition for smooth effect */
+}
+
+.video-container:hover .gradient-overlay {
+  left: 0; /* Moves the gradient from left to right on hover */
+}
+
+.culture-section hidden h1 {
+  color: #004aad;
+}
+
+/* Culture Section */
+.culture-section {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Merriweather", serif;
+  color: black;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.culture-section h1 {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.culture-section h1 span {
+  font-family: "Merriweather", "Poppins", sans-serif;
+  color: #004aad;
+  font-size: 55px;
+  font-family: "Merriweather", "Poppins", sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.culture-section h1::before,
+.culture-section h1::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: black;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+.culture-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 35px;
+  border: #0072ff;
+}
+
+.culture-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-out;
+  padding: 10px;
+}
+
+.culture-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.culture-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-out;
+  border: #0072ff;
+}
+
+.culture-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.culture-card h3 {
+  font-style: "Merriweather";
+  color: #111010;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.culture-card p {
+  font-size: 17px;
+  color: #134a91;
+  padding: 0 15px 15px;
+}
+
+.culture-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 2px 10px #0077b6;
+  transition: all 0.2s ease-in-out;
+}
+
+.culture-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-out;
+}
+
+.culture-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optionally, make the images in the culture cards scale slightly when hovered */
+.culture-card:hover img {
+  transform: scale(1.05); /* Slightly enlarges the image */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* More Button */
+.more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #197aca;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border: NONE;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: #81c5e0; /* Slightly darker skyblue */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Hidden class for elements we want to hide initially */
+.hidden {
+  display: none;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+.details-section {
+  background-color: #f4f4f9;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.details-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.image-text {
+  max-width: 800px;
+  text-align: left;
+}
+
+.image-text img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-text p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.details-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.details-section p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Festival Details Section */
+#festival-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.festival-info {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.festival-info img {
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.festival-info h3 {
+  font-size: 22px;
+  color: #004aad;
+}
+
+.festival-info p {
+  font-size: 16px;
+  color: #111010;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .festival {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description,
+  .image {
+    flex: 1 1 100%;
+  }
+
+  .description h2 {
+    font-size: 22px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .header h1 span {
+    font-size: 40px;
+  }
+
+  .description h2 {
+    font-size: 20px;
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Moalboal Travel Guide</title>
+        <link rel="icon" href="/WebsiteOngoing/logooo.png" type="image/png">
+        <!-- Include Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="Travel.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <a href="#" class="logo">EXPLORE MOALBOAL</a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Hamburger Icon and Navbar Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="FinalLandingpage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Travel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FinalFood.html">Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Culture.html">Culture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link book-tour" href="https://www.getyourguide.com/moalboal-l105184/"
+                                target="_blank">
+                                <img src="WhiteCalendarIcon.png" alt="Tour Icon" class="book-icon"> Book A Tour
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Home Content -->
+        <section class="home">
+            <div class="video-background">
+                <video id="home-video" autoplay muted loop>
+                    <source src="Moalboal Nature.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content">
+                <h1> Moalboal <br><span>Discover the Best of Nature</span></h1>
+                <p>Moalboal is known for its crystal-clear waters and vibrant marine life.</p>
+                <a href="#title-section"> Explore More </a>
+            </div>
+
+            <div class="gradient-overlay"></div> <!-- Gradient overlay for transition effect -->
+            </div>
+
+            <!-- Dots Navigation -->
+            <div class="dot-container">
+                <div class="dot" onclick="changeVideo(0)"></div>
+                <div class="dot" onclick="changeVideo(1)"></div>
+                <div class="dot" onclick="changeVideo(2)"></div>
+                <div class="dot" onclick="changeVideo(3)"></div>
+                <div class="dot" onclick="changeVideo(4)"></div>
+            </div>
+        </section>
+
+        <!-- Your Content -->
+        <section class="title-section" id="title-section">
+            <div class="line"></div>
+            <h2><span class="featuring">Moalboal</span> <span class="moalboal">Adventures</span></h2>
+            <div class="line"></div>
+        </section>
+
+        <!-- Section 1 box -->
+        <div class="section1-box container">
+            <div class="row align-items-center">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/moalboal white beach basdaku.png"
+                                    class="img-fluid rounded slider-img" alt="Basdaku White Beach"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/moalboal white beach basdaku.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/moalboal white beach basdaku (2).png"
+                                    class="img-fluid rounded slider-img" alt="Basdaku White Beach Alternate"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/moalboal white beach basdaku (2).png')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Moalboal White Beach (Basdaku)</h2>
+                    <p>
+                        Basdaku, which literally means "big sand" in Bisaya, is one of Cebu's longest coastlines.
+                        Basdaku in Moalboal is approximately one kilometer long and has exquisite white sands and
+                        transparent waters that rival Boracay! You'll never be bored here because there are so many
+                        activities to choose from. This South Cebu beach is a must-visit for sunbathing and
+                        stargazing.
+                        Visitors can experience Moalboal's widest and prettiest coastline for a low entrance fee of
+                        P10 to P20.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.698169547593!2d123.36660750944039!3d9.984613690078772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe71a23659da5%3A0x260f0dea16dbdcee!2sMoalboal%20white%20beach%20Basdaku!5e1!3m2!1sen!2sph!4v1733443033106!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 box -->
+        <div class="section2-box container">
+            <div class="row align-items-center flex-row-reverse">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/panagsama beach.png" class="img-fluid rounded" alt="Panagsama Beach"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/panagsama beach.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/panagsama beach (2).png" class="img-fluid rounded"
+                                    alt="Panagsama Beach" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/panagsama beach (2).png')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Panagsama Beach</h2>
+                    <p>
+                        Do you want to go on a relaxing island vacation? Join the locals at Panagsama Beach, a
+                        16-minute ride
+                        from Basdaku, Moalboal. Panagsama, also known as Basdiot, is the beach for beach lovers
+                        seeking a
+                        respite from Cebu's hectic tourist hordes. At first sight, Panagsama may appear to be your
+                        normal
+                        neighborhood beach, but many people are unaware of its attractions, which include a vibrant
+                        underwater
+                        scene. The beach, which is lined with beach resorts and diving schools, is Moalboal's best
+                        snorkeling
+                        location. Because it is a jumping off place for, you can meet a variety of sea creatures and
+                        have a
+                        once-in-a-lifetime opportunity to travel on, where you will be surrounded by massive schools
+                        of swimming
+                        sardines in Cebu's cleanest seas. Also, keep a watch out for jumping dolphins! Entrance to
+                        Panagsama
+                        Beach is free.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row-reverse">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0673332795604!2d123.36597190943975!3d9.94642069011521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8c24c8ad38d%3A0xab7c27b36f1acff2!2sPanagsama%20Beach%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1733445819152!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="title-section">
+            <div class="line"></div>
+            <h2><span class="featuring">Moalboal</span> <span class="moalboal">Snorkeling</span></h2>
+            <div class="line"></div>
+        </section>
+
+        <!-- Section 1 box -->
+        <div class="section1-box container">
+            <div class="row align-items-center">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/pescador island.png" class="img-fluid rounded" alt="Pescador Island"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/pescador island.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/pescador island (2).png" class="img-fluid rounded"
+                                    alt="Pescador Island" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/pescador island (2).png')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Marine Life in Pescador Island</h2>
+                    <p>
+                        Moalboal, Philippines, is a popular tourist destination in Visayas due
+                        to its reef diving locations, one of which is located on Pescador
+                        Island. The reefs on the tiny island slowly slope downward; soft coral
+                        covers the first 5 to 10 meters offshore before dropping abruptly to 40
+                        meters, forming a hard reef wall. Pescador Island's reefs support
+                        hundreds, if not thousands, of different fish species. This is why
+                        adventure trips to Pescador Island are popular among both locals and
+                        tourists.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.2915141921744!2d123.34110790361963!3d9.923156331792173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abeecc1f26e71b%3A0x8754393ae807e482!2sPescador%20Island!5e1!3m2!1sen!2sph!4v1733528563185!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 box -->
+        <div class="section2-box container">
+            <div class="row align-items-center flex-row-reverse">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel4" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/sardine run.png" class="img-fluid rounded" alt="Sardine Run"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/sardine run.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/sardine run (2).jpg" class="img-fluid rounded" alt="Sardine Run"
+                                    data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/sardine run (2).jpg')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Moalboal Sardine Run</h2>
+                    <p>
+                        If you've ever wanted to swim with a big school of fish, Moalboal will
+                        make your dreams come true with its thick concentration of sardines
+                        swimming in mass along a reef wall 30 meters off Panagsama Beach. The
+                        Moalboal Sardine Run tour remains mostly in the Panagsama Beach area
+                        throughout the year, allowing you to visit this remarkable natural
+                        occurrence at any time. If you're lucky, you might even spot a thresher
+                        shark looking for sardines to eat. For a truly immersive experience,
+                        try this one-of-a-kind adventure in Moalboal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row-reverse">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0673332795604!2d123.36597190943975!3d9.94642069011521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8c24c8ad38d%3A0xab7c27b36f1acff2!2sPanagsama%20Beach%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1733445819152!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1 box -->
+        <div class="section1-box container">
+            <div class="row align-items-center">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel5" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/moalboal house reef.png" class="img-fluid rounded"
+                                    alt="Moalboal House Reef" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/moalboal house reef.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/moalboal house reef (2).png" class="img-fluid rounded"
+                                    alt="Moalboal House Reef" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/moalboal house reef (2).png')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel5"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel5"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Dive at Moalboal House Reef</h2>
+                    <p>
+                        A dive spot in Moalboal does not require a long boat ride. Moalboal's
+                        House Reef is only a few meters offshore, so you can walk from the beach
+                        right into the dive! Don't worry about the quality of marine life you
+                        can see from a reef so near to shore! Even from this distance, you'll
+                        notice plenty of coral, beautiful sea sponges, fish, octopuses, and other
+                        marine life.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.2915141921744!2d123.34110790361963!3d9.923156331792173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abeecc1f26e71b%3A0x8754393ae807e482!2sPescador%20Island!5e1!3m2!1sen!2sph!4v1733528563185!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 box -->
+        <div class="section2-box container">
+            <div class="row align-items-center flex-row-reverse">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div id="imageCarousel6" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Image 1 -->
+                            <div class="carousel-item active">
+                                <img src="pictures/tuble marine sanctuary.png" class="img-fluid rounded"
+                                    alt="Tuble Marine Sanctuary" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/tuble marine sanctuary.png')" />
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="carousel-item">
+                                <img src="pictures/tuble marine sanctuary (2).png" class="img-fluid rounded"
+                                    alt="Tuble Marine Sanctuary" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                    onclick="handleImageClick('pictures/tuble marine sanctuary (2).png')" />
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel6"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel6"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Go Snorkeling at Tuble Marine Sanctuary</h2>
+                    <p>
+                        After exploring the Moalboal House Reef, drive to White Beach to visit
+                        the Tuble Marine Sanctuary. Its relatively shallow waters make it an
+                        ideal snorkeling spot. Even at 10 meters deep, you may witness a diverse
+                        range of marine life, including Hawksbill and Green Turtles.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Box -->
+            <div class="row align-items-center g-0 flex-column flex-md-row-reverse">
+                <!-- Map Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <div class="iframe-container" style="width: 100%; height: 300px; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25216.262444412972!2d123.3793588678309!3d9.949999017135175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8675b1bf8f1%3A0x537c9a19920eea9f!2sTuble%20Marine%20Sanctuary!5e1!3m2!1sen!2sph!4v1733529002145!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border: 0; margin: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="ms-3">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Comment Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="comment-section">
+                        <h3 class="text-center">Leave a Comment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="commentName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="commentName"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentText" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="commentText" rows="4"
+                                    placeholder="Write your comment here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="title-section">
+            <div class="line"></div>
+            <h2><span class="featuring">Best Time to Visit</span> <span class="moalboal">Moalboal</span></h2>
+            <div class="line"></div>
+        </section>
+
+        <div class="section2-box container">
+            <div class="row align-items-center flex-row-reverse">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="pictures/moalboal white beach.png" class="img-fluid rounded" alt="Moalboal White Beach"
+                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="handleImageClick('pictures/moalboal white beach.png')" />
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <p>
+                        Beach season never ends, especially on the sunny island of Cebu! However, to make the most
+                        of your
+                        holiday, avoid the rainy season, when the waters become too murky for a pleasant swim. If
+                        you want to
+                        see the best South Cebu beaches, plan your vacation for the summer. The greatest time to
+                        visit this
+                        coastal refuge is from January to early June, when you may freely swim, snorkel, and witness
+                        the
+                        sardines, coral reefs, and sea turtles in all their magnificence.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section1-box container">
+            <div class="row align-items-center">
+                <!-- Image Slider Column -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="pictures/south bus terminal.png" class="img-fluid rounded" alt="Moalboal White Beach"
+                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="handleImageClick('pictures/south bus terminal.png')" />
+                </div>
+
+                <!-- Description -->
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="text-primary">Getting There</h2>
+                    <p>What we like best about Moalboal is how easily accessible it is from Cebu City. Here's how.
+                    </p>
+                    <ul>
+                        <li>Ceres busses are available at Cebu South Bus Terminal and will drop you off to Moalboal
+                            via the Bato route for only P150.</li>
+                        <li>The bus travel takes between two and a half and three hours, depending on traffic.</li>
+                        <li>From the bus station or Moalboal Town Hall, take a tricycle or a habal-habal to the
+                            South Cebu beaches of Basdaku and Panagsama.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="pictures/moalboal_white_beach_basdaku.png" class="img-fluid"
+                            alt="Modal View" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foooter -->
+        <div class="footer">
+            <footer>
+                <!-- Wave Effect -->
+                <div class="waves">
+                    <div class="wave" id="wave1"></div>
+                </div>
+
+                <div class="footer-container">
+                    <!-- About Section -->
+                    <div class="footer-column about">
+                        <h4>About</h4>
+                        <p>
+                            Moalboal, located on the southwestern coast of Cebu, is a paradise known for its
+                            crystal-clear waters and vibrant marine life. Famous for the stunning Sardine Run, it offers
+                            world-class diving and snorkeling experiences.
+                        </p>
+                        <ul class="social-icon">
+                            <li><a href="#"><i class="bx bxl-facebook-circle"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div class="footer-column quick-links">
+                        <h4>Quick Links</h4>
+                        <ul class="menu">
+                            <li><a href="About.html"><i class="bx bx-chevron-left"></i> About</a></li>
+                            <li><a href="Travel.html"><i class="bx bx-chevron-left"></i> Travel</a></li>
+                            <li><a href="FinalFood.html"><i class="bx bx-chevron-left"></i> Food</a></li>
+                            <li><a href="Culture.html"><i class="bx bx-chevron-left"></i> Culture</a></li>
+                            <li><a href="https://www.getyourguide.com/moalboal-l105184/" target="_blank"><i
+                                        class="bx bx-chevron-left"></i> Book a Tour</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="footer-column contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="bx bx-map"></i> Moalboal, Cebu City, Philippines</a></li>
+                            <li><a href="#"><i class="bx bx-phone"></i> 0992 556 3532</a></li>
+                            <li><a href="#"><i class="bx bx-envelope"></i> moalboal@gmail.com</a></li>
+                            <li><a href="#"><i class="bx bx-globe"></i> www.moalboal.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>© Code with DevDynamos | All rights reserved</p>
+            </footer>
+        </div>
+
+        <a href="#" id="back-to-top" class="back-to-top">
+            <i class="bx bx-arrow-to-top"></i>
+        </a>
+
+        <script>
+            // Get the back-to-top button
+            const backToTopButton = document.getElementById('back-to-top');
+
+            // Show the button when the user scrolls down
+            window.onscroll = function () {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            };
+
+            // Scroll to the top when the button is clicked
+            backToTopButton.onclick = function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return false; // Prevents default behavior
+            };
+        </script>
+
+        <script>
+
+            // function of home video
+            function changeVideo(index) {
+                const videos = [
+                    "pictures/Moalboal Nature.mp4",
+                    "pictures/MainFeaturedTouristSpot1.mp4",
+                    "pictures/MoalboalOcean.mp4",
+                    "MoalboalFood.mp4",
+                    "MoalboalCultureUltraFinal.mp4"
+                ];
+                const titles = [
+                    "Moalboal <br><span>Discover the Best of Nature</span>",
+                    "Moalboal <br><span>The Heart Of Vibrant Marine Bliss</span>",
+                    "Moalboal <br><span>Rich in Sea</span>",
+                    "Moalboal <br><span>Unforgettable Food Experience</spa  n>",
+                    "Moalboal <br><span>Rooted in Heritage, Alive with Tradition.</span>"
+                ];
+
+                const description = [
+
+                ]
+                // Check if the video index is valid
+                if (index < 0 || index >= videos.length) {
+                    console.error("Invalid video index");
+                    return;
+                }
+
+                // Change the video source and title
+                document.getElementById('home-video').src = videos[index];
+                document.querySelector('.content h1').innerHTML = titles[index];
+
+                // Adding the class to style the title
+                document.querySelector('.content h1').classList.add('blue');
+
+                // Update the active dot navigation
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+
+            // Ensure the initial dot is active
+            window.onload = function () {
+                document.querySelector('.dot').classList.add('active');  // Add the first dot active by default
+            }
+
+        </script>
+        <script>
+            function handleImageClick(src) {
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = src;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>

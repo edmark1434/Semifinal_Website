@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discover Moalboal's Rich Culture</title>
+        <link rel="icon" href="/WebsiteOngoing/logooo.png" type="image/png">
+        <!-- Include Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="Culture.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <a href="#" class="logo">EXPLORE MOALBOAL</a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Hamburger Icon and Navbar Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="FinalLandingpage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Travel.html">Travel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FinalFood.html">Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Landing page.html"
+                                onclick="showCultureSection(event)">Culture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link book-tour" href="https://www.getyourguide.com/moalboal-l105184/"
+                                target="_blank">
+                                <img src="WhiteCalendarIcon.png" alt="Tour Icon" class="book-icon"> Book A Tour
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Home Content -->
+        <section class="home">
+            <div class="video-background">
+                <video id="home-video" autoplay muted loop>
+                    <source src="MoalboalCultureUltraFinal.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content">
+                <h1> Moalboal <br><span>Rooted in Heritage, Alive with Tradition.</span></h1>
+                <p>Moalboal is known for its crystal-clear waters and vibrant marine life.</p>
+                <a href="#title-section"> Explore More </a>
+            </div>
+
+            <div class="gradient-overlay"></div> <!-- Gradient overlay for transition effect -->
+            </div>
+
+            <!-- Dots Navigation -->
+            <div class="dot-container">
+                <div class="dot" onclick="changeVideo(0)"></div>
+                <div class="dot" onclick="changeVideo(1)"></div>
+                <div class="dot" onclick="changeVideo(2)"></div>
+                <div class="dot" onclick="changeVideo(3)"></div>
+                <div class="dot" onclick="changeVideo(4)"></div>
+            </div>
+        </section>
+        <!-- Your Content -->
+        <section class="title-section" id="title-section">
+            <div class="line"></div>
+            <h2><span class="featuring">Moalboal</span> <span class="moalboal">CULTURE</span></h2>
+            <div class="line"></div>
+
+            <div class="culture-container">
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-sinulog.avif" alt="Festival">
+                    <h3>Festivals</h3>
+                    <p>Celebrate vibrant traditions and religious festivities.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/sinulog.html')">Read
+                        More</button>
+                </div>
+
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-local.jpg" alt="Local Handicrafts">
+                    <h3>Local Handicrafts</h3>
+                    <p>Explore unique souvenirs crafted by skilled artisans.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/TryHandicrafts.html')">Read
+                        More</button>
+                </div>
+
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-dance.jpg" alt="Traditional Dance">
+                    <h3>Traditional Dance</h3>
+                    <p>Experience the rhythmic movements of local folk dances.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/traditionaldance.html')">Read
+                        More</button>
+                </div>
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-food.jpg" alt="Cebuano Cuisine">
+                    <h3>Cebuano Cuisine</h3>
+                    <p>Savor the authentic flavors of Cebuano heritage.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/cebuanocusine.html')">Read
+                        More</button>
+
+                </div>
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-historical.jpg" alt="Historical Sites">
+                    <h3>Historical Sites</h3>
+                    <p>Visit iconic landmarks with historical significance.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/historicalsites.html')">Read
+                        More</button>
+                </div>
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-community.jpg" alt="Community Lifestyle">
+                    <h3>Community Lifestyle</h3>
+                    <p>Admire the elegance of local traditional lifestyle.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/Communitylifestyle.html')">Read
+                        More</button>
+                </div>
+                <div class="culture-card">
+                    <img src="/WebsiteOngoing/CultureSubPages/feat-church.JPG" alt="Religious">
+                    <h3>Religious</h3>
+                    <p>Discover the rich of soul and love of Moalboal.</p>
+                    <button class="more-button" onclick="navigateToPage('CultureSubPages/Religious.html')">Read
+                        More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foooter -->
+        <div class="footer">
+            <footer>
+                <!-- Wave Effect -->
+                <div class="waves">
+                    <div class="wave" id="wave1"></div>
+                </div>
+
+                <div class="footer-container">
+                    <!-- About Section -->
+                    <div class="footer-column about">
+                        <h4>About</h4>
+                        <p>
+                            Moalboal, located on the southwestern coast of Cebu, is a paradise known for its
+                            crystal-clear waters and vibrant marine life. Famous for the stunning Sardine Run, it offers
+                            world-class diving and snorkeling experiences.
+                        </p>
+                        <ul class="social-icon">
+                            <li><a href="#"><i class="bx bxl-facebook-circle"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div class="footer-column quick-links">
+                        <h4>Quick Links</h4>
+                        <ul class="menu">
+                            <li><a href="About.html"><i class="bx bx-chevron-left"></i> About</a></li>
+                            <li><a href="Travel.html"><i class="bx bx-chevron-left"></i> Travel</a></li>
+                            <li><a href="FinalFood.html"><i class="bx bx-chevron-left"></i> Food</a></li>
+                            <li><a href="Culture.html"><i class="bx bx-chevron-left"></i> Culture</a></li>
+                            <li><a href="https://www.getyourguide.com/moalboal-l105184/" target="_blank"><i
+                                        class="bx bx-chevron-left"></i> Book a Tour</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="footer-column contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="bx bx-map"></i> Moalboal, Cebu City, Philippines</a></li>
+                            <li><a href="#"><i class="bx bx-phone"></i> 0992 556 3532</a></li>
+                            <li><a href="#"><i class="bx bx-envelope"></i> moalboal@gmail.com</a></li>
+                            <li><a href="#"><i class="bx bx-globe"></i> www.moalboal.com</a></li>
+                            <li><a href="#" id="back-to-top" class="back-to-top"><i class="bx bx-arrow-to-top"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>© Code with DevDynamos | All rights reserved</p>
+            </footer>
+        </div>
+
+        <script>
+            function navigateToPage(pageUrl) {
+                if (pageUrl) {
+                    window.location.href = pageUrl;
+                } else {
+                    console.error("Page URL is undefined or invalid.");
+                }
+            }
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return rect.top <= window.innerHeight && rect.bottom >= 0;
+            }
+
+            // Add 'visible' class to culture cards when scrolled into view
+            function animateCultureCards() {
+                const cards = document.querySelectorAll('.culture-card');
+                cards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.classList.add('visible');
+                    }
+                });
+            }
+
+            // Trigger animation on scroll
+            window.addEventListener('load', animateCultureCards);
+
+            // Trigger animation when scrolling
+            window.addEventListener('scroll', animateCultureCards);
+
+            // function of home video
+            function changeVideo(index) {
+                const videos = [
+                    "MainFeaturedTouristSpot1.mp4",
+                    "Moalboal Nature.mp4",
+                    "MoalboalOcean.mp4",
+                    "MoalboalFood.mp4",
+                    "MoalboalCultureUltraFinal.mp4"
+                ];
+                const titles = [
+                    "Moalboal <br><span>The Heart Of Vibrant Marine Bliss</span>",
+                    "Moalboal <br><span>Discover the Best of Nature</span>",
+                    "Moalboal <br><span>Rich in Sea</span>",
+                    "Moalboal <br><span>Unforgettable Food Experience</span>",
+                    "Moalboal <br><span>Rooted in Heritage, Alive with Tradition.</span>"
+                ];
+
+                const description = [
+
+                ]
+                // Check if the video index is valid
+                if (index < 0 || index >= videos.length) {
+                    console.error("Invalid video index");
+                    return;
+                }
+
+                const videoElement = document.getElementById("home-video");
+                const titleElement = document.querySelector(".content h1");
+
+                // Add fade-out effect
+                videoElement.classList.add("hidden-video");
+
+                setTimeout(() => {
+                    videoElement.src = videos[index]; // Change video
+                    titleElement.innerHTML = titles[index]; // Update title
+                    videoElement.classList.remove("hidden-video"); // Add fade-in effect
+                }, 500);
+
+                // Change the video source and title
+                document.getElementById('home-video').src = videos[index];
+                document.querySelector('.content h1').innerHTML = titles[index];
+
+                // Adding the class to style the title
+                document.querySelector('.content h1').classList.add('blue');
+
+                // Update the active dot navigation
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+
+            // Ensure the initial dot is active
+            window.onload = function () {
+                document.querySelector('.dot').classList.add('active');  // Add the first dot active by default
+
+                // Get the back-to-top button
+                const backToTopButton = document.getElementById('back-to-top');
+
+                // Show the button when the user scrolls down
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                };
+
+                // Scroll to the top when the button is clicked
+                backToTopButton.onclick = function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return false; // Prevents default behavior
+                };
+            }
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang=!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Let's Explore Moalboal!</title>
+            <link rel="icon" href="/WebsiteOngoing/logooo.png">
+            <!-- Include Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+                rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="FinalLandingpage.css">
+
+        </head>
+
+        <body>
+
+            <header class="header">
+                <a href="#" class="logo">EXPLORE MOALBOAL</a>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- Hamburger Icon and Navbar Toggle Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <!-- Navigation Links -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="FinalLandingpage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="About.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Travel.html">Travel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="FinalFood.html">Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Culture.html">Culture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link book-tour" href="https://www.getyourguide.com/moalboal-l105184/"
+                                    target="_blank">
+                                    <img src="WhiteCalendarIcon.png" alt="Tour Icon" class="book-icon"> Book A Tour
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+
+            <!-- Home Content -->
+            <section class="home">
+                <div class="video-background">
+                    <video id="home-video" autoplay muted loop>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h1> Moalboal <br><span>The Heart Of Vibrant Marine Bliss</span></h1>
+                    <p>Moalboal is known for its crystal-clear waters and vibrant marine life.</p>
+                    <a href="#title-section"> Explore More </a>
+                </div>
+
+                <div class="gradient-overlay"></div> <!-- Gradient overlay for transition effect -->
+                </div>
+
+                <!-- Dots Navigation -->
+                <div class="dot-container">
+                    <div class="dot" onclick="changeVideo(0)"></div>
+                    <div class="dot" onclick="changeVideo(1)"></div>
+                    <div class="dot" onclick="changeVideo(2)"></div>
+                    <div class="dot" onclick="changeVideo(3)"></div>
+                    <div class="dot" onclick="changeVideo(4)"></div>
+                </div>
+            </section>
+
+
+
+            <!-- TITLE FEATURING MOALBOAL -->
+
+            <section class="title-section" id="title-section">
+                <div class="line"></div>
+                <h2><span class="featuring">Moalboal</span> <span class="moalboal">Adventures</span></h2>
+                <div class="line"></div>
+            </section>
+
+            <section class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="FinalLandingpagePictureVideos/canyoneering.jpg" alt="Image 1">
+                    <div class="card-content">
+                        <h3>Canyoneering</h3>
+                        <p>Leap into the thrill of Moalboal canyoneering!</p>
+                        <a href="/WebsiteOngoing/LandingSubPages/Canyoneering.html">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img style="object-position: top; object-fit: cover;"
+                        src="FinalLandingpagePictureVideos/treking.jpg" alt="Image 2">
+                    <div class="card-content">
+                        <h3>Trekking</h3>
+                        <p>Conquer the amazing trails of Moalboal!</p>
+                        <a href="/WebsiteOngoing/LandingSubPages/Trekking.html">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="FinalLandingpagePictureVideos/nature.jpg" alt="Image 3">
+                    <div class="card-content">
+                        <h3>Nature</h3>
+                        <p>Embrace the wild beauty of Moalboal!</p>
+                        <a href="/WebsiteOngoing/LandingSubPages/Nature.html">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="FinalLandingpagePictureVideos/whiteb.jpg" alt="Image 4">
+                    <div class="card-content">
+                        <h3>Beaches</h3>
+                        <p>Unwind in Moalboal’s stunning beach haven!</p>
+                        <a href="/WebsiteOngoing/LandingSubPages/Beaches.html">Read More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURING MOALBOAL -->
+
+            <section class="title-section">
+                <div class="line"></div>
+                <h2><span class="featuring">Featuring</span> <span class="moalboal">Moalboal</span></h2>
+                <div class="line"></div>
+            </section>
+
+            <section id="featured-places" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/pescador island.png" alt="Place 1">
+                                    <div class="card-content">
+                                        <h3>Pescador Island</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/sardine run.png" alt="Place 2">
+                                    <div class="card-content">
+                                        <h3>Sardine Run</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">☆</span>
+                                            <span class="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/panagsama.jpg" alt="Place 3">
+                                    <div class="card-content">
+                                        <h3>Panagsama Beach</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Card 4 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/kawasan.jpg" alt="Place 4">
+                                    <div class="card-content">
+                                        <h3>Kawasan Falls</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">☆</span>
+                                            <span class="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/whiteb.jpg" alt="Place 5">
+                                    <div class="card-content">
+                                        <h3>White Beach</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card" ontouchstart="showInfo(this)" onmouseover="showInfo(this)"
+                                    onmouseout="hideInfo(this)">
+                                    <img src="FinalLandingpagePictureVideos/sumilon.jpg" alt="Place 6">
+                                    <div class="card-content">
+                                        <h3>Sumilon Island</h3>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">☆</span>
+                                            <span class="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#featured-places"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featured-places"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+
+
+
+            <!-- FOOTER AREA  -->
+            <div class="footer">
+                <footer>
+                    <!-- Wave Effect -->
+                    <div class="waves">
+                        <div class="wave" id="wave1"></div>
+                    </div>
+
+                    <div class="footer-container">
+                        <!-- About Section -->
+                        <div class="footer-column about">
+                            <h4>About</h4>
+                            <p>
+                                Moalboal, located on the southwestern coast of Cebu, is a paradise known for its
+                                crystal-clear waters and vibrant marine life. Famous for the stunning Sardine Run, it
+                                offers world-class diving and snorkeling experiences.
+                            </p>
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="bx bxl-facebook-circle"></i></a></li>
+                                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                                <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Links Section -->
+                        <div class="footer-column quick-links">
+                            <h4>Quick Links</h4>
+                            <ul class="menu">
+                                <li><a href="About.html"><i class="bx bx-chevron-left"></i> About</a></li>
+                                <li><a href="Travel.html"><i class="bx bx-chevron-left"></i> Travel</a></li>
+                                <li><a href="FinalFood.html"><i class="bx bx-chevron-left"></i> Food</a></li>
+                                <li><a href="Culture.html"><i class="bx bx-chevron-left"></i> Culture</a></li>
+                                <li><a href="https://www.getyourguide.com/moalboal-l105184/" target="_blank"><i
+                                            class="bx bx-chevron-left"></i> Book a Tour</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Section -->
+                        <div class="footer-column contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li><a href="#"><i class="bx bx-map"></i> Moalboal, Cebu City, Philippines</a></li>
+                                <li><a href="#"><i class="bx bx-phone"></i> 0992 556 3532</a></li>
+                                <li><a href="#"><i class="bx bx-envelope"></i> moalboal@gmail.com</a></li>
+                                <li><a href="#"><i class="bx bx-globe"></i> www.moalboal.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>© Code with DevDynamos | All rights reserved</p>
+                </footer>
+            </div>
+
+            <a href="#" id="back-to-top" class="back-to-top">
+                <i class="bx bx-arrow-to-top"></i>
+            </a>
+
+            <script>
+                // Get the back-to-top button
+                const backToTopButton = document.getElementById('back-to-top');
+
+                // Show the button when the user scrolls down
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                };
+
+                // Scroll to the top when the button is clicked
+                backToTopButton.onclick = function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return false; // Prevents default behavior
+                };
+            </script>
+
+            <script>
+
+                // function of home video
+                function changeVideo(index) {
+                    const videos = [
+                        "FinalLandingpagePictureVideos/MainFeaturedTouristSpot1.mp4",
+                        "FinalLandingpagePictureVideos/Moalboal Nature.mp4",
+                        "FinalLandingpagePictureVideos/MoalboalOcean.mp4",
+                        "MoalboalFood.mp4",
+                        "MoalboalCultureUltraFinal.mp4"
+                    ];
+                    const titles = [
+                        "Moalboal <br><span>The Heart Of Vibrant Marine Bliss</span>",
+                        "Moalboal <br><span>Discover the Best of Nature</span>",
+                        "Moalboal <br><span>Rich in Sea</span>",
+                        "Moalboal <br><span>Unforgettable Food Experience</span>",
+                        "Moalboal: <br><span>Rooted in Heritage, Alive with Tradition.</span>"
+                    ];
+
+                    const description = [
+
+                    ]
+                    // Check if the video index is valid
+                    if (index < 0 || index >= videos.length) {
+                        console.error("Invalid video index");
+                        return;
+                    }
+
+                    // Change the video source and title
+                    document.getElementById('home-video').src = videos[index];
+                    document.querySelector('.content h1').innerHTML = titles[index];
+
+                    // Adding the class to style the title
+                    document.querySelector('.content h1').classList.add('blue');
+
+                    // Update the active dot navigation
+                    const dots = document.querySelectorAll('.dot');
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    dots[index].classList.add('active');
+                }
+
+                // Ensure the initial dot is active
+                window.onload = function () {
+                    changeVideo(0); // Load the first video by default
+                };
+
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        </body>
+
+    </html>

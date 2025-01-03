@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/WebsiteOngoing/logooo.png" type="image/png">
+        <title>Local Handicrafts</title>
+        <style>
+            body {
+                font-family: 'Merriweather', 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #d3e2ef, #18acdd);
+                color: #333;
+                overflow-x: hidden;
+            }
+
+            .header {
+                width: 100%;
+                text-align: center;
+                margin-top: 50px;
+                padding-bottom: 20px;
+                /* margin-bottom: 10px; */
+                color: black;
+                animation: fadeInDown 1.5s ease;
+            }
+
+            .header h1 {
+                font-size: 3rem;
+                font-family: "Merriweather", serif;
+                font-style: italic;
+                line-height: 1.2;
+                position: relative;
+                margin: 0;
+            }
+
+            .header h1::before,
+            .header h1::after {
+                content: "";
+                display: inline-block;
+                width: 20%;
+                height: 3px;
+                background-color: black;
+                vertical-align: middle;
+                margin: 0 20px;
+            }
+
+            .header h1 span {
+                color: #004aad;
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+                animation: bounce 2s infinite;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                padding: 50px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .local {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #f9f7f0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                animation: fadeInUp 1s ease;
+            }
+
+            .description {
+                flex: 1;
+                padding: 10px;
+                animation: slideInLeft 1.5s ease;
+                margin: 30px;
+            }
+
+            .description h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+                color: #0c61a2;
+                text-align: center;
+            }
+
+            .description p {
+                background-color: #f9f7f0;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 1rem;
+                line-height: 1.8;
+                color: #100f0f;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: justify;
+            }
+
+            .image {
+                flex: 1;
+                text-align: center;
+                animation: slideInRight 1.5s ease;
+            }
+
+            .image img {
+                max-width: 90%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.5s;
+            }
+
+            .image img:hover {
+                transform: scale(1.1);
+            }
+
+            .film-carousel {
+                margin-left: 20px;
+                width: 500px;
+                /* Adjust to image width */
+                height: 750px;
+                /* Visible area height */
+                overflow: hidden;
+                position: relative;
+                justify-content: center;
+            }
+
+            .carousel-track {
+                display: flex;
+                flex-direction: column;
+                /* Stack images vertically */
+                animation: film-scroll 45s linear infinite;
+                /* Controls movement */
+            }
+
+            .carousel-track img {
+                width: 100%;
+                height: auto;
+                /* Maintain aspect ratio */
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .back-button {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: #fff;
+                background-color: #007bff;
+                /* Blue background */
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* Optional shadow for better visibility */
+                transition: background-color 0.3s ease;
+                z-index: 100000000000;
+                /* Ensure it appears above all other content */
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .back-button:hover {
+                background-color: #0056b3;
+                /* Darker blue on hover */
+            }
+
+            .back-arrow {
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 10px solid #fff;
+                /* Left-pointing arrow (using right border) */
+            }
+
+            @keyframes film-scroll {
+                0% {
+                    transform: translateY(0);
+                    /* Start at the top */
+                }
+
+                100% {
+                    transform: translateY(-100%);
+                    /* Move to the bottom */
+                }
+            }
+
+
+            /* Animations */
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes bounce {
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-15px);
+                }
+
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+
+
+            @media (max-width: 768px) {
+                .local {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .description p {
+                    font-size: 0.9rem;
+                }
+
+                .header h1 {
+                    font-size: 2.5rem;
+                }
+
+                .description h2 {
+                    font-size: 1.5rem;
+                }
+
+                .image img {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .content {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .description,
+                .image {
+                    flex: 1 1 100%;
+                }
+
+                .description h2 {
+                    font-size: 22px;
+                }
+
+                .description p {
+                    font-size: 16px;
+                }
+
+                .image img {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .header h1 {
+                    font-size: 36px;
+                }
+
+                .header h1 span {
+                    font-size: 40px;
+                }
+
+                .description h2 {
+                    font-size: 20px;
+                }
+
+                .description p {
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .festival {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .description,
+                .image {
+                    flex: 1 1 100%;
+                }
+
+                .description h2 {
+                    font-size: 22px;
+                }
+
+                .description p {
+                    font-size: 16px;
+                }
+
+                .image img {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .header h1 {
+                    font-size: 36px;
+                }
+
+                .header h1 span {
+                    font-size: 40px;
+                }
+
+                .description h2 {
+                    font-size: 20px;
+                }
+
+                .description p {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="../Culture.html" class="back-button">
+            <span class="back-arrow"></span> Back to Main Page
+        </a>
+
+        <header class="header">
+            <h1>Moalboal <span>RELIGIOUS</span></h1>
+        </header>
+        <div class="content">
+            <div class="local">
+                <div class="description">
+                    <h2 style="text-transform: uppercase;"> Ministry of Ushering</h2>
+                    <p>
+                        Religion plays a significant role in the daily life of the people in Moalboal, with the majority
+                        of the population being Roman Catholic.
+                        The town's strong Catholic faith is evident in the presence of churches, religious festivals,
+                        and community activities centered around religious devotion.<br><br>
+                        One of the key religious landmarks in Moalboal is the St. John Nepomucene Parish Church, which
+                        is not only a place of worship but also a historical site dating
+                        back to the Spanish era. This church serves as a gathering point for the community, where locals
+                        attend Mass, participate in sacraments, and celebrate religious
+                        holidays. The church plays a central role in the spiritual life of Moalboal, providing a sense
+                        of community and faith for its residents.<br><br>
+                        Religious practices are deeply integrated into the daily lives of the people. Many households
+                        have home altars, and prayers are an essential part of family life.
+                        Overall, Moalboal's religious life reflects a strong tradition of faith, unity, and devotion.
+                    </p>
+
+                </div>
+                <div class="image">
+                    <div class="film-carousel">
+                        <div class="carousel-track">
+                            <img src="r1.jpg" alt="MoalBoal festival">
+                            <img src="r2.webp" alt="MoalBoal festival">
+                            <img src="r3.webp" alt="MoalBoal festival">
+                            <img src="r4.jpg" alt="MoalBoal festival">
+                            <img src="r5.jpg" alt="MoalBoal festival">
+                            <img src="r2.webp" alt="MoalBoal festival">
+                            <img src="r1.jpg" alt="MoalBoal festival">
+                            <img src="r3.webp" alt="MoalBoal festival">
+                            <img src="r4.jpg" alt="MoalBoal festival">
+                            <img src="r2.webp" alt="MoalBoal festival">
+                            <img src="r5.jpg" alt="MoalBoal festival">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
